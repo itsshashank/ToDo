@@ -1,11 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 class Task {
   String id;
   String title;
   String note;
   String completed;
-  String deadline;
   String uid;
 
   Task(
@@ -21,7 +18,6 @@ class Task {
     title = data['title'];
     note = data['note'];
     completed = data['completed'];
-    deadline = data['deadline'];
     uid = data['uid'];
   }
 
@@ -32,7 +28,6 @@ class Task {
       'title': title,
       'note': note,
       'completed': completed,
-      'deadine': deadline
     };
   }
 }

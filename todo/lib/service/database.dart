@@ -12,6 +12,6 @@ class DatabaseService {
     return await taskCollection.add(task.toMap());
   }
   updateTaskStatus(Task task) async {
-    await taskCollection.document(task.id).setData(task.toMap());
+    await taskCollection.document(task.id).setData(task.toMap(),merge: true);
   }
 }
